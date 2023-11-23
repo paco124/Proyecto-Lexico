@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter.filedialog import askopenfilename, asksaveasfilename
-from AnalisisLexico import lexico  # Asumiendo que esta importación es correcta
+from AnalisisLexico import lexico
 
 def cargar_archivo():
     filename = askopenfilename(filetypes=[("Text files", "*.txt")])
