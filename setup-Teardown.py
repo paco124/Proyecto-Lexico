@@ -1,3 +1,4 @@
+#Las pruebas unitarias las tienes que estar haceindo una por una
 import unittest
 from AnalisisLexico import lexico
 

@@ -1,0 +1,34 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10.5  # Cambia esto según la versión de Python que estés utilizando
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt  # Ajusta esto según tu proyecto
+
+      - name: Run tests
+        run: |
+            python ./setup-Teardown.py
+            python ./test_integration.py
+        #   # Ejecuta las pruebas unitarias y las pruebas integradoras
+        #   python -m unittest discover -s test
+
+        #   # Si tienes un archivo setup-Teardown.py, puedes incluirlo también
+        #   python -m unittest discover -p setup-Teardown.py -s test
+            
