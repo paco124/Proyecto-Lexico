@@ -1,4 +1,4 @@
-import re
+import re 
 tokens = [
     ('PALABRA_RESERVADA', r'\b(public|private|class|void|int|double|String|new|nextLine|nextInt|nextDouble|println|if|else|do|while|switch|case|default)\b'),
     ('COMENTARIO', r'//.*'),
